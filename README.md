@@ -27,4 +27,4 @@ sequenceDiagram
     GH->>Flux: Commit new HelmRelease
     Flux->>GKE: Apply manifests
     Docker->>GKE: Provide image for Deployment
-    GKE-->>Dev: kbot app updated
+    GKE-->>Dev: kbot app updated.
