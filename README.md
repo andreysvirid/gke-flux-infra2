@@ -1,15 +1,15 @@
-### 1. Що потрібно зробити (Flowchart)
+### 1. Что нужно сделать (Flowchart)
 
 ```mermaid
 flowchart TD
-    A[Розробник комітить код] --> B[GitHub репозиторій]
-    B --> C[Налаштувати HelmRelease для kbot]
+    A[Разработчик коммитит код] --> B[GitHub репозиторий]
+    B --> C[Настроить HelmRelease для kbot]
     C --> D[GitHub Actions: build Docker image]
-    D --> E[Push образ у DockerHub]
-    E --> F[Оновити HelmRelease у GitHub]
-    F --> G[FluxCD підтягує зміни]
-    G --> H[GKE: застосунок kbot оновлено]
-2. Як це працює (Sequence diagram)
+    D --> E[Push образ в DockerHub]
+    E --> F[Обновить HelmRelease в GitHub]
+    F --> G[FluxCD подтягивает изменения]
+    G --> H[GKE: приложение kbot обновлено]
+2. Как это работает (Sequence diagram)
 mermaid
 Копировать код
 sequenceDiagram
@@ -27,4 +27,4 @@ sequenceDiagram
     GH->>Flux: Commit new HelmRelease
     Flux->>GKE: Apply manifests
     Docker->>GKE: Provide image for Deployment
-    GKE-->>Dev: kbot app updated.
+    GKE-->>Dev: kbot app updated
