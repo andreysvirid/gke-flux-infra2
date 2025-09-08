@@ -1,6 +1,7 @@
 ### 1. Что нужно сделать (Flowchart)
 
 ```mermaid
+
 flowchart TD
     A[Разработчик коммитит код] --> B[GitHub репозиторий]
     B --> C[Настроить HelmRelease для kbot]
@@ -9,9 +10,8 @@ flowchart TD
     E --> F[Обновить HelmRelease в GitHub]
     F --> G[FluxCD подтягивает изменения]
     G --> H[GKE: приложение kbot обновлено]
-2. Как это работает (Sequence diagram)
-mermaid
-Копировать код
+
+Как это работает (Sequence diagram)
 sequenceDiagram
     participant Dev as Developer
     participant GH as GitHub
