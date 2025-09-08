@@ -10,14 +10,9 @@ flowchart TD
     F --> G[FluxCD подтягивает изменения]
     G --> H[GKE: приложение kbot обновлено]
 
+### 2. Как это работает (Sequence diagram)
 
-    sequenceDiagram
-    participant Dev as Developer
-    participant GH as GitHub
-    participant Actions as GitHub Actions
-    participant Docker as DockerHub
-    participant Flux as FluxCD
-    participant GKE as GKE Cluster
+```mermaid
 
     Dev->>GH: Push code / HelmRelease changes
     GH->>Actions: Trigger workflow
