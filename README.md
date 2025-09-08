@@ -10,9 +10,6 @@ flowchart TD
     F --> G[FluxCD подтягивает изменения]
     G --> H[GKE: приложение kbot обновлено]
 
-### 2. Как это работает (Sequence diagram)
-
-```mermaid
 
     Dev->>GH: Push code / HelmRelease changes
     GH->>Actions: Trigger workflow
