@@ -10,7 +10,7 @@ flowchart TD
     E --> F[Обновить HelmRelease в GitHub]
     F --> G[FluxCD подтягивает изменения]
     G --> H[GKE: приложение kbot обновлено]
-
+```
 
 ```mermaid
 2. Как это работает (Sequence diagram)
@@ -30,3 +30,4 @@ sequenceDiagram
     Flux->>GKE: Apply manifests
     Docker->>GKE: Provide image for Deployment
     GKE-->>Dev: kbot app updated
+```
