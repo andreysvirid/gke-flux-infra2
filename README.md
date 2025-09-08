@@ -9,13 +9,3 @@ flowchart TD
     E --> F[Обновить HelmRelease в GitHub]
     F --> G[FluxCD подтягивает изменения]
     G --> H[GKE: приложение kbot обновлено]
-
-
-    Dev->>GH: Push code / HelmRelease changes
-    GH->>Actions: Trigger workflow
-    Actions->>Docker: Build & push Docker image
-    Actions->>GH: Update HelmRelease with new image tag
-    GH->>Flux: Commit new HelmRelease
-    Flux->>GKE: Apply manifests
-    Docker->>GKE: Provide image for Deployment
-    GKE-->>Dev: kbot app updated
