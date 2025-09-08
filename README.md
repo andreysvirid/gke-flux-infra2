@@ -1,3 +1,4 @@
+```markdown
 ### 1. Что нужно сделать (Flowchart)
 
 ```mermaid
@@ -10,6 +11,8 @@ flowchart TD
     F --> G[FluxCD подтягивает изменения]
     G --> H[GKE: приложение kbot обновлено]
 
+
+```mermaid
 2. Как это работает (Sequence diagram)
 sequenceDiagram
     participant Dev as Developer
